@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzz.transactions.xa.mapper.order.OrderMapper">
+    <!--
+        创建订单的SQL
+    -->
+    <insert id="createOrder" parameterType="int">
+        INSERT INTO `order`(product_id) VALUES(#{productId})
+    </insert>
+</mapper>

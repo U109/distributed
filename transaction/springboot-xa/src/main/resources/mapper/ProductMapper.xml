@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzz.transactions.xa.mapper.product.ProductMapper">
+    <!--
+        更新商品库存的SQL
+    -->
+    <update id="updateStock">
+        UPDATE product
+        SET stock=stock - #{count}
+        WHERE product_id = #{productId}
+    </update>
+</mapper>

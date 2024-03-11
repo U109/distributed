@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzz.producer.mapper.AccountInfoLogMapper">
+
+    <resultMap id="BaseResultMap" type="com.zzz.producer.entity.AccountInfoLog">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="accountno" column="accountNo" jdbcType="VARCHAR"/>
+        <result property="amount" column="amount" jdbcType="VARCHAR"/>
+        <result property="txno" column="txNo" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="CHAR"/>
+        <result property="otherno" column="otherNo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,accountNo,amount,
+        txNo,status,otherNo
+    </sql>
+</mapper>
